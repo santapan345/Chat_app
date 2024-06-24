@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Theme Colors */
+:root {
+    --background-color: #121212;
+    --primary-color: #1f1f1f;
+    --secondary-color: #bb86fc;
+    --text-color: #e0e0e0;
+    --accent-color: #03dac6;
+}
+
+/* App */
+.App {
+    background-color: var(--background-color);
+    max-height: 100%;
+    padding: 20px;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login */
+.login_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login_icon {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 30px;
+}
+
+.login_form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login_form input {
+    margin: 10px;
+    height: 50px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 5px solid var(--accent-color);
+    font-size: 15px;
+    padding: 0 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login_form button {
+    width: 100%;
+    max-width: 150px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--text-color);
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login_form button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Chat Container */
+.chats_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.chats_icon {
+    color: red;
+}
+
+.chats_logout {
+    color: var(--accent-color);
+}
+
+.home {
+    padding: 0 10%;
+}
+
+/* Chats list */
+.chats_list {
+    height: 75vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.chat_sender {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.chat_sender img,
+.chat_receiver img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chat_sender p {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    max-width: 60%;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat_receiver {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.chat_receiver p {
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    max-width: 60%;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Input text */
+.inputtext_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.inputtext_container button {
+    width: 100%;
+    max-width: 150px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.inputtext_container button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.inputtext_container textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
